@@ -27,10 +27,10 @@ lr_model = joblib.load('./model/logistic_regression_model.pkl')
 
 # App title
 st.title("Análisis de sentimientos de X (Tweet)")
-st.write("Ingresa el texto que quiere analizar:")
+st.write("Ingresa el texto que deseas analizar:")
 
 # User input text
-input_text = st.text_area("Input text here")
+input_text = st.text_area("Por ejemplo: 'Your research article is wonderful'.")
 
 # Model selection
 st.write("Selecciona los modelos para el análisis:")
