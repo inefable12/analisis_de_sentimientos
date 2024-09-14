@@ -26,19 +26,19 @@ nb_model = joblib.load('./model/naive_bayes_model.pkl')
 lr_model = joblib.load('./model/logistic_regression_model.pkl')
 
 # App title
-st.title("Tweet Sentiment Analysis App")
-st.write("Enter the text you want to analyze for sentiment:")
+st.title("Análisis de sentimientos de X (Tweet)")
+st.write("Ingresa el texto que quiere analizar:")
 
 # User input text
 input_text = st.text_area("Input text here")
 
 # Model selection
-st.write("Select models for sentiment analysis:")
+st.write("Selecciona los modelos para el análisis:")
 use_nb = st.checkbox('Naive Bayes')
 use_svm = st.checkbox('SVM')
 use_lr = st.checkbox('Logistic Regression')
 
-if st.button("Analyze"):
+if st.button("Analizar"):
     if not input_text:
         st.write("Please enter the text for analysis.")
     elif not (use_nb or use_svm or use_lr):
